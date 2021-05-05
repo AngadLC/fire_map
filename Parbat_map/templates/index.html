@@ -13,14 +13,87 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
-        <style>
-            #mapid { height: 500px;}
-        </style>
+    <style>
+        body {
+            font: roboto;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background: #172035;
+        }
+
+
+        P {
+            font-weight: bold;
+            font-size: xx-large;
+            display: inline-block;
+            color: orange;
+
+        }
+
+        nav {
+            display: inline-block;
+            margin-top: -5px;
+            margin-left: 25px;
+        }
+
+        .nav1anch {
+
+            color: white;
+            margin-left: 110px;
+            margin-right: 110px;
+        }
+
+        .nav1anch:hover {
+            color: white;
+            background: gray;
+            padding: 40px;
+        }
+
+        footer {
+            width: 100%;
+            height: 80px;
+            background: #172035;
+            position: 700px;
+        }
+
+        #footer {
+            justify-content: center;
+            text-indent: 600px;
+            color: white;
+            margin-top: 32px;
+            font-size: 1em;
+        }
+
+
+
+
+
+        #mapid {
+            height: 800px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>HI we are going to make fire risk map</h1>
-    <div id="mapid" ></div>
+    <header>
+
+
+        <nav>
+            <p>Fire Risk Map</p>
+            <a href="#" class="nav1anch">Home</a>
+            <a href="#" class="nav1anch">About Project</a>
+            <a href="#" class="nav1anch">About Us</a>
+            <a href="#" class="nav1anch">Contact</a>
+
+        </nav>
+
+
+    </header>
+
+    <div id="mapid"></div>
     <script>
 
         var province;
@@ -35,6 +108,16 @@
         }).addTo(mymap);
         var dem = L.tileLayer('{{ dem }}').addTo(mymap);
     </script>
+
+
+    <footer>
+
+
+        <p id="footer">Copyright © 2020 All Right Reseved</p>
+
+    </footer>
+
+
 </body>
 
 </html>
