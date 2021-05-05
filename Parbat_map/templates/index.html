@@ -106,7 +106,22 @@
             zoomOffset: -1,
             accessToken: 'pk.eyJ1IjoibG9zdGIxIiwiYSI6ImNqaTBjcGd4bjE2cGMza3M2MWEzcTRwd3gifQ.Ps6yKHol2bmEPndMSeYKKw'
         }).addTo(mymap);
+        
         var dem = L.tileLayer('{{ dem }}').addTo(mymap);
+        var slope = L.tileLayer('{{ slope }}').addTo(mymap);
+        var aspect = L.tileLayer('{{ aspect }}').addTo(mymap);
+        var lulc = L.tileLayer('{{ lulc }}').addTo(mymap);
+        
+        var baseMaps1 = {
+        "OSM" :basemap,
+      };
+      var RenderedMap = {
+          "ndvi":dem,
+          "slope":slope,
+          "aspect":aspect,
+          "lulc":lulc
+      };
+      var mylayer = L.control.layers(baseMaps1, RenderedMap).addTo(mymap);
     </script>
 
 
