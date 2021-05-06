@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Risk Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <style>
+    body {
+      font: roboto;
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 0 0 0 0;
+    }
+
+    header {
+      width: 100%;
+      height: 100px;
+      background: #172035;
+      position: static;
+      margin-top: 0px;
+      margin-left: 0px;
+      padding: 0 0 0 0;
+    }
+
+    P {
+      font-weight: bold;
+      font-size: xx-large;
+      display: inline-block;
+      color: transparent;
+    }
+
+    nav {
+      display: inline-block;
+      margin-top: -5px;
+      margin-left: 25px;
+    }
+
+    .nav1anch {
+      color: white;
+      margin-left: 110px;
+      margin-right: 110px;
+      text-decoration: none;
+    }
+
+    .nav1anch:hover {
+      color: white;
+      background: gray;
+      padding: 40px;
+      font-weight: bold;
+    }
+
+    div{
+      background:lightblue;
+    }
+
+    h1 {
+      color: black;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    #content {
+      color: black;
+      font-family: roboto;
+      font-size: 15px;
+      font-weight: normal;
+      padding-left: 50px;
+      padding-right: 50px;
+      text-align: justify;
+    }
+
+    
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background:  #172035;
+    }
+
+    #footer {
+        justify-content: center;
+        text-indent: 600px;
+        color: white;
+        margin-top: 32px;
+        font-size: 1em;
+      }
+
+
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <p>Fire Risk Map</p>
+      <a href="index.html" class="nav1anch">Home</a>
+      <a href="index1.html" class="nav1anch">Project</a>
+      <a href="#" class="nav1anch">About Us</a>
+      <a href="#" class="nav1anch">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>About This Project</h1>
+
+    <div>
+      <p id="content">
+        Forest fire frequency is increasing globally with the significant
+        incidents occurring in Asia (Giglio et al. 2006). Wildfires have major
+        environmental and ecological issues (Zhang et al. 2016), threaten
+        human lives (Bowman et al. 2009), causing massive losses of lives and
+        properties (Russell-Smith et al. 2007). Satellite data can help detect
+        forest fires in different land use (Kaufman et al. 1998; Justice et
+        al. 2006) and the Geographical Information System (GIS) and remote
+        sensing techniques have been used widely to assess and predict the
+        fire frequency (Roy et al. 2002; Giglio et al. 2006; Abedi Gheshlaghi
+        et al. 2020). Assessment of the integrated spatial-temporal pattern of
+        hazardous natural events is essential in disaster risk management,
+        however, this aspect is often neglected (Loboda and Csiszar 2007;
+        Middendorp et al. 2013), and majority of the studies consider these
+        two dimensions separately. The MODIS satellite exploits middle
+        infrared and thermal infrared bands to identify thermal anomalies and
+        generate fire locations and has relatively better accuracy (Roy et al.
+        2002; Pereira et al. 2017). Fire-risk maps are widely developed in
+        many countries at coarse resolution using wildland fuel models or
+        vegetation maps (Chuvieco et al. 2004; Hessburg et al. 2007) as an
+        early warning precaution. Fire risk zone is an area where fires are
+        likely to occur that might impact other places as well (Jaiswal et al.
+        2002 ; Erten et al. 2004). An accurate risk zone mapping is essential
+        to abate the possible effects of fires in the forest (Jaiswal et al.
+        2002). TAL and CHAL are two significant landscapes in Nepal and are
+        considered to be Asia's important biodiversity ecoregion. Forest fires
+        are one of the major ecological threats that affect different regions
+        of these landscapes annually, mainly in the pre-monsoon season (WWF
+        Nepal 2017 ). The main objective of this study was to identify where
+        and when are the fire most likely to occur. This is crucial to
+        understand the factors associated with forest fires and for planning
+        strategies to reduce forest fires, to control and manage the sources
+        of ignition, and to identify areas at risk (Leone et al. 2003;
+        Koutsias et al. 2016; Parajuli and Haynes 2015). Developing an
+        integrated forest fire risk zone can therefore be helpful in deciding
+        the problems taking into account of the human and biophysical factors.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p id="footer">Copyright © 2020 All Right Reseved</p>
+  </footer>
+</body>
+
+</html>
