@@ -10,6 +10,9 @@ from dateutil.parser import parse
 import pandas as pd
 import pygeoj
 import json
+def project(request):
+    # return HttpResponse("hi")
+    return render(request,'project.html')
 def index(request):
     print("hi")
     geometry = ee.Geometry.Polygon([[[83.829803, 28.316455],[84.157677, 28.316455],[84.157677, 28.150463],
@@ -60,7 +63,7 @@ def aspect():
     return tile
 def lulc():
     lulc1 = ee.ImageCollection("COPERNICUS/Landcover/100m/Proba-V-C3/Global").select('discrete_classification')
-    print(lulc1)
+    # print(lulc1)
     # lulcreclass = lulc1.map(func_cbg)
     # viz_parameter = {'min':0,'max':200,'palette': ['white','black','red']}
     # map_id_dict = ee.Image(lulcreclass).getMapId(viz_parameter)
@@ -74,5 +77,6 @@ def func_cbg (img):
     .where(img.eq(0).And(img.eq(50)), 9) \
     .where(img.gt(50).And(img.lte(100)), 6) \
     .where(img.gt(100).And(img.lte(150)), 4)
+
 
 
